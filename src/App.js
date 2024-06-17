@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import SideNav from './components/SideNav';
 import ApplicationAnalysis from './pages/ApplicationAnalysis';
 import TransDetailedReport from './pages/TransDetailedReport';
@@ -14,7 +14,7 @@ const App = () => {
       <div className="app">
         <SideNav />
         <div className="content">
-          <Switch>
+          <Routes>
             <Route
               path="/applicationAnalysis"
               component={ApplicationAnalysis}
@@ -26,7 +26,7 @@ const App = () => {
             <Route path="/summaryReport" component={SummaryReport} />
             <Route path="/downloadcenter" component={DownloadCenter} />
             <Route path="/webUserActivity" component={WebUserActivity} />
-          </Switch>
+          </Routes>
         </div>
       </div>
     </Router>

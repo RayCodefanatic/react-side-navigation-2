@@ -1,0 +1,54 @@
+.app {
+  display: flex;
+}
+
+.side-nav {
+  width: 250px;
+  background-color: #333;
+  color: white;
+  padding: 10px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.side-nav.open {
+  transform: translateX(0);
+}
+
+.side-nav .nav-link,
+.side-nav .accordion-header {
+  display: block;
+  padding: 10px;
+  color: white;
+  text-decoration: none;
+}
+
+.side-nav .nav-link:hover,
+.side-nav .accordion-header:hover {
+  background-color: #575757;
+}
+
+.accordion-content {
+  padding-left: 20px;
+}
+
+.hamburger-menu {
+  display: none;
+  font-size: 30px;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.content {
+  flex-grow: 1;
+  padding: 20px;
+}
+
+@media (max-width: 768px) {
+  .side-nav {
+    transform: translateX(-100%);
+  }
+
+  .hamburger-menu {
+    display: block;
+  }
+}
